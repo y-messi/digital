@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+        <!-- Header-->
+        <header class="bg-dark py-5">
+            <div class="container px-4 px-lg-5 my-5">
+                <div class="text-center text-white">
+                    <h1 class="display-4 fw-bolder">{{ category }}</h1>
+                    <p class="lead fw-normal text-white-50 mb-0">Category Page</p>
+                </div>
+            </div>
+        </header>
+        <!-- Section-->
+        <section class="py-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    {% for product in products %}
+                            <!-- Product details-->
+                            <div class="container">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">{{ product.name }}</h5>
+                                </div>
+
+                                <div class="text-center">
+                                    <!-- product.description -->
+                                    <h5 class="fw-bolder">{{ product.description }}</h5>
+                                </div>
+                            </div>
+                    {% endfor %}
+                    
+                </div>
+            </div>
+        </section>
+        
+{% endblock%}
